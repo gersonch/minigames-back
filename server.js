@@ -1,11 +1,12 @@
 import express from "express";
 import wordOfTheDayRoute from "./app/routes/wordOfTheDay.route.js";
 import cors from "cors";
+import dotenv from "dotenv";
 
 // const PORT = process.env.PORT || 3000;
 
 const app = express();
-
+app.use(dotenv.config());
 app.use(express.json());
 
 const corsOptions = {
