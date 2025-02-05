@@ -2,7 +2,7 @@ import express from "express";
 import wordOfTheDayRoute from "./app/routes/wordOfTheDay.route.js";
 import cors from "cors";
 
-dotenv.config();
+// const PORT = process.env.PORT || 3000;
 
 const app = express();
 
