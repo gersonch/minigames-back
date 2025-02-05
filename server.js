@@ -10,9 +10,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 const corsOptions = {
-  origin: "http://localhost:5173" || "https://minigames-beta.vercel.app/", // Cambia esta URL a la del frontend que esté permitido
+  origin: ["http://localhost:5173", "https://minigames-beta.vercel.app/"], // Cambia esta URL a la del frontend que esté permitido
   methods: ["GET", "POST", "PUT", "DELETE"], // Métodos HTTP permitidos
-  credentials: true, // Para permitir el envío de cookies
 };
 
 app.use(cors(corsOptions));
