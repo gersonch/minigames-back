@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-  origin: ["https://minigames-beta.vercel.app"], // Cambia esta URL a la del frontend que esté permitido
+  origin: ["https://minigames-beta.vercel.app", "http://localhost:5173"], // Cambia esta URL a la del frontend que esté permitido
   methods: ["GET", "POST", "PUT", "DELETE"], // Métodos HTTP permitidos
   credentials: true, // Habilita el intercambio de cookies entre dominios
 };
