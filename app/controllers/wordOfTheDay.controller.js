@@ -16,7 +16,7 @@ export const getWordOfTheDay = async (req, res) => {
     res.status(500).json({ message: "Error interno del servidor" });
   }
 };
-
+// -----------------------------------------------------------------------------
 let currentIndex = 0;
 
 const updateWord = () => {

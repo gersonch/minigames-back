@@ -17,8 +17,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// app.use("/wordOfTheDay", wordOfTheDayRoute);
+app.use("/wordOfTheDay", wordOfTheDayRoute);
+
 // app.listen(PORT, () => {
 //   console.log(`Server is running on port ${PORT}`);
 // });
+
 export default app;
