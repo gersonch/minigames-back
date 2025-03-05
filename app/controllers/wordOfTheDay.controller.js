@@ -16,3 +16,21 @@ export const getWordOfTheDay = async (req, res) => {
     res.status(500).json({ message: "Error interno del servidor" });
   }
 };
+
+let currentIndex = 0;
+
+const updateWord = () => {
+  currentIndex = (currentIndex + 1) % mockWordOfTheDay.length;
+};
+updateWord();
+setInterval(updateWord, 1000 * 60 * 30); // Actualiza cada 30 minutos
+
+export const wordforHalfHour = async (req, res) => {
+  try {
+    const wordforHalfHour = mockWordOfTheDay[currentIndex];
+    res.json({ word: wordforHalfHour });
+  } catch (error) {
+    console.error("Error al obtener la palabra del día:", error);
+    res.status(500).json({ message: "Error interno del servidor" });
+  }
+};
