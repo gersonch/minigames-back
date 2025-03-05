@@ -1,1 +1,1 @@
-export const mockWordOfTheDay = ["jejejej"];
+export const mockWordOfTheDay = ["hola"];
