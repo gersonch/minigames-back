@@ -1,1 +1,1 @@
-export const mockWordOfTheDay = ["mañana"];
+export const mockWordOfTheDay = ["ojala"];
