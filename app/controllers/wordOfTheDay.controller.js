@@ -22,8 +22,8 @@ let currentIndex = 0;
 const updateWord = () => {
   currentIndex = (currentIndex + 1) % mockWordOfTheDay.length;
 };
-updateWord();
-setInterval(updateWord, 1000 * 60 * 20); // Actualiza cada 30 minutos
+
+setInterval(updateWord, 1000 * 60); // Actualiza cada 30 minutos
 
 export const wordforHalfHour = async (req, res) => {
   try {
